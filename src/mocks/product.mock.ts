@@ -5,7 +5,7 @@ const mockProductSingle = {
     description: 'Descrição teste',
     category: 'electronics',
     image: 'https://example.com/image.jpg',
-    rating: { rate: 4.5, count: 100 },
+    rating: { rate: 3, count: 100 },
 }
 
 const mockProducts = [

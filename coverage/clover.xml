@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1767892352153" clover="3.2.0">
-  <project timestamp="1767892352153" name="All files">
-    <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="5" coveredelements="5" complexity="0" loc="4" ncloc="4" packages="2" files="2" classes="2"/>
+<coverage generated="1767892900782" clover="3.2.0">
+  <project timestamp="1767892900782" name="All files">
+    <metrics statements="19" coveredstatements="19" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6" elements="27" coveredelements="27" complexity="0" loc="19" ncloc="19" packages="4" files="4" classes="4"/>
     <package name="components.Product.ProductCard">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="ProductCard.tsx" path="C:\Users\pC gAMER\Desktop\desafio-altaa\src\components\Product\ProductCard\ProductCard.tsx">
@@ -10,12 +10,39 @@
         <line num="5" count="1" type="stmt"/>
       </file>
     </package>
+    <package name="components.Product.ProductDetail">
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="ProductDetail.tsx" path="C:\Users\pC gAMER\Desktop\desafio-altaa\src\components\Product\ProductDetail\ProductDetail.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="33" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="hooks.useProducts">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="useProducts.ts" path="C:\Users\pC gAMER\Desktop\desafio-altaa\src\hooks\useProducts\useProducts.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="24" count="5" type="stmt"/>
+      </file>
+    </package>
     <package name="mocks">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="product.mock.ts" path="C:\Users\pC gAMER\Desktop\desafio-altaa\src\mocks\product.mock.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
       </file>
     </package>
   </project>

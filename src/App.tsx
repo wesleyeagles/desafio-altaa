@@ -1,5 +1,5 @@
 import EmptyState from "./components/EmptyState/EmptyState";
-import ProductCard from "./components/Product/ProductCard/ProductCard";
+import ProductDetail from "./components/Product/ProductDetail/ProductDetail";
 import useCategories from "./hooks/useCategories/useCategories";
 import useProducts from "./hooks/useProducts/useProducts";
 
@@ -19,7 +19,7 @@ const App = () => {
     ) : (
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((product) => (
-          <ProductCard product={product} key={product.id} onClick={() => {}} />
+          <ProductDetail product={product} key={product.id} onClose={() => {}} />
         ))}
       </div>
     )}
