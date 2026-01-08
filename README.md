@@ -352,7 +352,7 @@ npm run test:coverage
 - [ ] **Toast Notifications**: Feedback visual para ações
 
 ### Médio Prazo
-- [ ] **Carrinho de Compras**: Funcional com Context API + localStorage
+- ✅ **Carrinho de Compras**: Funcional com Context API + localStorage
 - [ ] **Favoritos**: Persistência local de produtos favoritos
 - [ ] **Modo Escuro**: Dark mode com preferência do sistema
 - [ ] **PWA**: Service workers, offline-first, install prompt
