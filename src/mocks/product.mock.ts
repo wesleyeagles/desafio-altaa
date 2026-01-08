@@ -1,3 +1,13 @@
+const mockProductSingle = {
+    id: 1,
+    title: 'Produto Teste',
+    price: 99.99,
+    description: 'Descrição teste',
+    category: 'electronics',
+    image: 'https://example.com/image.jpg',
+    rating: { rate: 4.5, count: 100 },
+}
+
 const mockProducts = [
       {
         id: 1,
@@ -19,4 +29,4 @@ const mockProducts = [
       },
 ];
 
-export { mockProducts }
+export { mockProducts, mockProductSingle }
