@@ -1,16 +1,18 @@
 import { ShoppingCart, Star, X } from "lucide-react";
 import type { Product } from "../../../types/product.types";
 import { useCart } from "../../../contexts/CartContext";
-import { useState } from "react";
+import { useCartAnimation } from "../../../hooks/useCartAnimation/useCartAnimation";
 
 const ProductDetail = ({ product, onClose }: { product: Product; onClose: () => void }) => {
   const { addToCart } = useCart();
-  const [added, setAdded] = useState(false);
+  const { imageRef, isAnimating, animateToCart } = useCartAnimation();
 
   const handleAddToCart = () => {
     addToCart(product);
-    setAdded(true);
-    setTimeout(() => setAdded(false), 2000);
+    
+    animateToCart(() => {
+      setTimeout(onClose, 100);
+    });
   };
 
   return (
@@ -27,6 +29,7 @@ const ProductDetail = ({ product, onClose }: { product: Product; onClose: () => 
       <div className="grid md:grid-cols-2 gap-8 p-8">
         <div className="bg-gray-100 rounded-xl p-8 flex items-center justify-center">
           <img
+            ref={imageRef}
             src={product.image}
             alt={product.title}
             className="max-w-full max-h-100 object-contain"
@@ -65,9 +68,12 @@ const ProductDetail = ({ product, onClose }: { product: Product; onClose: () => 
             <p className="text-gray-700 leading-relaxed">{product.description}</p>
           </div>
           
-          <button onClick={handleAddToCart} className="w-full bg-blue-600 text-white py-4 rounded-xl font-semibold hover:bg-blue-700 transition flex items-center justify-center gap-2">
+          <button 
+          disabled={isAnimating} 
+          onClick={handleAddToCart} 
+          className="w-full bg-blue-600 text-white py-4 rounded-xl font-semibold hover:bg-blue-700 transition flex items-center justify-center gap-2">
             <ShoppingCart className="w-5 h-5" />
-            {added ? 'Adicionado ao Carrinho!' : 'Adicionar ao Carrinho'}
+            {isAnimating ? 'Adicionando...' : 'Adicionar ao Carrinho'}
           </button>
         </div>
       </div>
