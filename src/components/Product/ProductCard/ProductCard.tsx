@@ -23,7 +23,7 @@ const ProductCard = ({ product, onClick }: { product: Product; onClick: () => vo
       </h3>
       <div className="flex items-center justify-between">
         <span className="text-2xl font-bold text-gray-900">
-          ${product.price.toFixed(2)}
+          R$ {product.price.toFixed(2)}
         </span>
         <div className="flex items-center gap-1">
           <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />

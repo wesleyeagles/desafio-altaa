@@ -60,7 +60,7 @@ const ProductDetail = ({ product, onClose }: { product: Product; onClose: () => 
           </div>
           
           <div className="text-4xl font-bold text-gray-900 mb-6">
-            ${product.price.toFixed(2)}
+            R$ {product.price.toFixed(2)}
           </div>
           
           <div className="mb-6">
