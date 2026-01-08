@@ -2,7 +2,7 @@ import { ShoppingCart, Star, X } from "lucide-react";
 import type { Product } from "../../../types/product.types";
 
 const ProductDetail = ({ product, onClose }: { product: Product; onClose: () => void }) => (
-  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 overflow-y-auto">
+  <div className="fixed inset-0 backdrop-brightness-50 backdrop-blur-lg bg-opacity-50 flex items-center justify-center p-4 z-50 overflow-y-auto">
     <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
       <button
         onClick={onClose}
