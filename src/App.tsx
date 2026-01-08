@@ -1,3 +1,6 @@
+import EmptyState from "./components/EmptyState/EmptyState";
+import ErrorState from "./components/ErrorState/ErrorState";
+import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
 import useCategories from "./hooks/useCategories/useCategories";
 import useProducts from "./hooks/useProducts/useProducts";
 
@@ -10,23 +13,9 @@ const App = () => {
   }
 
   return (
-    <div>
-      <h1>Produtos</h1>
-      <ul>
-        {products.map(product => (
-          <li key={product.id}>
-            {product.title} - ${product.price}
-          </li>
-        ))}
-      </ul>
-
-      <h2>Categorias</h2>
-      <ul>
-        {categories.map((category, index) => (
-          <li key={index}>{category}</li>
-        ))}
-      </ul>
-    </div>
+   <div>
+    <EmptyState message="Nenhum produto encontrado" />
+   </div>
   )
 }
 
