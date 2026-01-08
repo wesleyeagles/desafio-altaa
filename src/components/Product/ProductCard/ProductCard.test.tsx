@@ -9,6 +9,6 @@ describe("ProductCard", () => {
 
     expect(screen.getByText("Produto Teste")).toBeInTheDocument();
     expect(screen.getByText("electronics")).toBeInTheDocument();
-    expect(screen.getByText("$99.99")).toBeInTheDocument();
+    expect(screen.getByText("R$ 99.99")).toBeInTheDocument();
   });
 });
