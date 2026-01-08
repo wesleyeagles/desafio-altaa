@@ -1,7 +1,19 @@
 import { ShoppingCart, Star, X } from "lucide-react";
 import type { Product } from "../../../types/product.types";
+import { useCart } from "../../../contexts/CartContext";
+import { useState } from "react";
 
-const ProductDetail = ({ product, onClose }: { product: Product; onClose: () => void }) => (
+const ProductDetail = ({ product, onClose }: { product: Product; onClose: () => void }) => {
+  const { addToCart } = useCart();
+  const [added, setAdded] = useState(false);
+
+  const handleAddToCart = () => {
+    addToCart(product);
+    setAdded(true);
+    setTimeout(() => setAdded(false), 2000);
+  };
+
+  return (
   <div className="fixed inset-0 backdrop-brightness-50 backdrop-blur-lg bg-opacity-50 flex items-center justify-center p-4 z-50 overflow-y-auto">
     <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
       <button
@@ -53,14 +65,14 @@ const ProductDetail = ({ product, onClose }: { product: Product; onClose: () => 
             <p className="text-gray-700 leading-relaxed">{product.description}</p>
           </div>
           
-          <button className="w-full bg-blue-600 text-white py-4 rounded-xl font-semibold hover:bg-blue-700 transition flex items-center justify-center gap-2">
+          <button onClick={handleAddToCart} className="w-full bg-blue-600 text-white py-4 rounded-xl font-semibold hover:bg-blue-700 transition flex items-center justify-center gap-2">
             <ShoppingCart className="w-5 h-5" />
-            Add to Cart
+            {added ? 'Adicionado ao Carrinho!' : 'Adicionar ao Carrinho'}
           </button>
         </div>
       </div>
     </div>
   </div>
-);
+)};
 
 export default ProductDetail;

@@ -10,6 +10,8 @@ import useCategories from "./hooks/useCategories/useCategories";
 import Filters from "./components/Filters/Filters";
 import type { SortOption } from "./types/shared.types";
 import useFilteredProducts from "./hooks/useFilteredProducts/useFilteredProducts";
+import CartButton from "./components/Cart/CartButton/CartButton";
+import CartDrawer from "./components/Cart/CartDrawer/CartDrawer";
 
 const App = () => {
   const { products, loading } = useProducts();
@@ -17,6 +19,7 @@ const App = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedCategory, setSelectedCategory] = useState('');
   const [sortOption, setSortOption] = useState<SortOption>('name-asc');
+  const [cartOpen, setCartOpen] = useState(false);
 
   const { filteredAndSortedProducts } = useFilteredProducts({
     products,
@@ -30,9 +33,12 @@ const App = () => {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="flex items-center gap-3">
-            <ShoppingCart className="w-8 h-8 text-blue-600" />
-            <h1 className="text-3xl font-bold text-gray-900">Desafio Altaa Digital</h1>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <ShoppingCart className="w-8 h-8 text-blue-600" />
+              <h1 className="text-3xl font-bold text-gray-900">Desafio Altaa Digital</h1>
+            </div>
+            <CartButton onClick={() => setCartOpen(true)} />
           </div>
         </div>
       </header>
@@ -72,6 +78,8 @@ const App = () => {
           onClose={() => setSelectedProduct(null)}
         />
       )}
+
+      <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} />
     </div>
 )}
 
