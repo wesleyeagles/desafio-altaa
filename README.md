@@ -4,7 +4,7 @@ Aplicação front-end em React + TypeScript que consome a Fake Store API, demons
 
 ## 🚀 Deploy
 
-**[Ver aplicação ao vivo](#)** (https://desafio-altaa-ten.vercel.app/)
+**[Ver aplicação ao vivo](https://desafio-altaa-ten.vercel.app/)**
 
 ---
 
