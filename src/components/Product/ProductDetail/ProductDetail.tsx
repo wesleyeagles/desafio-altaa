@@ -20,7 +20,7 @@ const ProductDetail = ({ product, onClose }: { product: Product; onClose: () => 
     <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition z-10"
+        className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition z-10 cursor-pointer"
         aria-label="Close"
       >
         <X className="w-6 h-6" />
@@ -37,7 +37,7 @@ const ProductDetail = ({ product, onClose }: { product: Product; onClose: () => 
         </div>
         
         <div>
-          <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">
+          <span className="text-sm font-medium bg-linear-to-r from-emerald-500 to-emerald-900 p-1 rounded-lg text-white uppercase tracking-wide">
             {product.category}
           </span>
           <h1 className="text-3xl font-bold text-gray-900 mt-2 mb-4">{product.title}</h1>
@@ -59,7 +59,7 @@ const ProductDetail = ({ product, onClose }: { product: Product; onClose: () => 
             <span className="text-gray-500">({product.rating.count} reviews)</span>
           </div>
           
-          <div className="text-4xl font-bold text-gray-900 mb-6">
+          <div className="text-4xl font-bold text-transparent bg-clip-text bg-linear-to-r from-emerald-500 to-emerald-900 mb-6">
             R$ {product.price.toFixed(2)}
           </div>
           
@@ -71,7 +71,7 @@ const ProductDetail = ({ product, onClose }: { product: Product; onClose: () => 
           <button 
           disabled={isAnimating} 
           onClick={handleAddToCart} 
-          className="w-full bg-blue-600 text-white py-4 rounded-xl font-semibold hover:bg-blue-700 transition flex items-center justify-center gap-2">
+          className="w-full bg-blue-600 text-white py-4 font-semibold bg-linear-to-r from-emerald-500 to-emerald-900 p-2 hover:from-emerald-600 rounded-xl transition cursor-pointer flex items-center justify-center gap-2">
             <ShoppingCart className="w-5 h-5" />
             {isAnimating ? 'Adicionando...' : 'Adicionar ao Carrinho'}
           </button>

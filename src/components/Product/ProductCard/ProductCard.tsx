@@ -15,14 +15,14 @@ const ProductCard = ({ product, onClick }: { product: Product; onClick: () => vo
       />
     </div>
     <div className="p-4">
-      <span className="text-xs font-medium text-blue-600 uppercase tracking-wide">
+      <span className="text-xs font-medium bg-linear-to-r from-emerald-500 to-emerald-900 p-1 rounded-lg text-white uppercase tracking-wide">
         {product.category}
       </span>
       <h3 className="font-semibold text-gray-800 mt-2 mb-3 line-clamp-2 min-h-12">
         {product.title}
       </h3>
       <div className="flex items-center justify-between">
-        <span className="text-2xl font-bold text-gray-900">
+        <span className="text-2xl font-bold text-transparent bg-clip-text bg-linear-to-r from-emerald-500 to-emerald-900">
           R$ {product.price.toFixed(2)}
         </span>
         <div className="flex items-center gap-1">

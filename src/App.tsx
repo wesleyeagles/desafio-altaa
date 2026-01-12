@@ -35,7 +35,9 @@ const App = () => {
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <ShoppingCart className="w-8 h-8 text-blue-600" />
+                <div className="bg-linear-to-r from-emerald-500 to-emerald-900 p-2 rounded-xl">
+                  <ShoppingCart className="w-8 h-8 text-blue-600" color="#FFF" />
+                </div>
               <h1 className="text-3xl font-bold text-gray-900">Desafio Altaa Digital</h1>
             </div>
             <CartButton onClick={() => setCartOpen(true)} />

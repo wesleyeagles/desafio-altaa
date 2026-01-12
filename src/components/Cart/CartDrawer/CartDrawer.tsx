@@ -29,7 +29,6 @@ const CartDrawer = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
         onClick={onClose}
       />
       
-      {/* Drawer com slide */}
       <div
         className={`fixed right-0 top-0 h-full w-full max-w-md bg-white shadow-2xl z-50 flex flex-col transition-transform duration-300 ease-out ${
           isAnimating ? 'translate-x-0' : 'translate-x-full'
@@ -39,7 +38,7 @@ const CartDrawer = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           <h2 className="text-xl font-bold">Carrinho</h2>
           <button
             onClick={onClose}
-            className="p-2 hover:bg-gray-100 rounded-full transition"
+            className="p-2 hover:bg-gray-100 rounded-full transition cursor-pointer"
             aria-label="Fechar carrinho"
           >
             <X className="w-6 h-6" />
@@ -78,7 +77,7 @@ const CartDrawer = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
               >
                 Limpar Carrinho
               </button>
-              <button className="w-full py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold">
+              <button className="w-full py-3 text-white bg-linear-to-r from-emerald-500 to-emerald-900 p-2 hover:from-emerald-600 rounded-lg cursor-pointer transition font-semibold">
                 Finalizar Compra
               </button>
             </div>

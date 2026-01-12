@@ -18,7 +18,9 @@ const Filters = ({
     <div className="grid md:grid-cols-2 gap-6">
       <div>
         <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-3">
-          <Filter className="w-4 h-4" />
+          <div className="bg-linear-to-r from-emerald-500 to-emerald-900 p-1 rounded-lg">
+            <Filter className="w-4 h-4" color="#FFF" />
+          </div>
           Categoria
         </label>
         <select
@@ -37,7 +39,9 @@ const Filters = ({
       
       <div>
         <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-3">
-          <ArrowUpDown className="w-4 h-4" />
+          <div className="bg-linear-to-r from-emerald-500 to-emerald-900 p-1 rounded-lg">
+            <ArrowUpDown className="w-4 h-4" color="#FFF" />
+          </div>
           Ordenar por
         </label>
         <select
